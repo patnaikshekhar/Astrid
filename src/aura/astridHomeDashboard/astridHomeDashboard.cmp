@@ -1,0 +1,29 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" >
+    <aura:attribute name="candidateHeaderIconName" type="String" description="Icon Name to show in the header" access="global" required="true" />
+    <aura:attribute name="candidateHeaderIconType" type="String" description="Icon Type to show in the header" access="global" required="true" />
+    <aura:attribute name="companyHeaderIconName" type="String" description="Icon Name to show in the header" access="global" required="true" />
+    <aura:attribute name="companyHeaderIconType" type="String" description="Icon Type to show in the header" access="global" required="true" />
+    <aura:attribute name="candidateHeader" type="String" description="Text to show in the header" access="global" required="true" />
+    <aura:attribute name="companyHeader" type="String" description="Text to show in the header" access="global" required="true" />
+    <aura:attribute name="candidateRegisterText" type="String" description="Text to show above the candidate register button" access="global" required="true" />
+    <aura:attribute name="companyRegisterText" type="String" description="Text to show above the company register button" access="global" required="true" />
+    <aura:attribute name="candidateRegisterButtonText" type="String" description="Text to show on the candidate register button" access="global" required="true" />
+    <aura:attribute name="companyRegisterButtonText" type="String" description="Text to show on the company register button" access="global" required="true" />
+    <aura:attribute name="candidateRegisterButtonLink" type="String" description="Link to go to on the candidate register button" access="global" required="true" />
+    <aura:attribute name="companyRegisterButtonLink" type="String" description="Link to go to on the company register button" access="global" required="true" />
+    
+	<div class="slds-grid slds-wrap">
+        <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2">
+            <c:icon iconType="{! v.candidateHeaderIconType }" iconName="{! v.candidateHeaderIconName }" class="dashboard-icon" />
+            <h2 class="header">{! v.candidateHeader }</h2>
+            <h3 class="description">{! v.candidateRegisterText }</h3>
+            <a class="slds-button slds-button--brand" href="{! v.candidateRegisterButtonLink }">{! v.candidateRegisterButtonText }</a>
+        </div>
+        <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2">
+            <c:icon iconType="{! v.companyHeaderIconType }" iconName="{! v.companyHeaderIconName }" class="dashboard-icon" />
+            <h2 class="header">{! v.companyHeader }</h2>
+            <h3 class="description">{! v.companyRegisterText }</h3>
+            <a class="slds-button slds-button--brand" href="{! v.companyRegisterButtonLink }">{! v.companyRegisterButtonText }</a>
+        </div>
+    </div>
+</aura:component>

@@ -1,0 +1,32 @@
+.THIS .steps {
+    padding: 30px 30px 10px 30px;
+}
+
+.THIS .contentHeader {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.THIS .content {
+    padding-left: 60px;
+}
+
+.THIS .content {
+    padding-right: 60px;
+}
+
+.THIS .col {
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.THIS .backButton * {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    float:left;
+}
+
+.THIS .saveButton * {
+    margin-top: 30px;
+    float:right;
+}

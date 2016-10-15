@@ -1,0 +1,11 @@
+.THIS.main {
+    text-align: center;
+    color: white;
+    height: 400px;
+    padding: 120px;
+    width: 100%;
+}
+
+.THIS .text {
+    height: 100px;
+}

@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Charity__c</fullName>
+        <externalId>false</externalId>
+        <label>Charity</label>
+        <picklist>
+            <picklistValues>
+                <fullName>THE GAVI FUND AFFILIATE</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CANCER RESEARCH UK</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>THE SAVE THE CHILDREN FUND</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ROYAL COMMONWEALTH SOCIETY FOR THE BLIND</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MACMILLAN CANCER SUPPORT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>OTHER</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Convicted_of_a_Criminal_Offence__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Convicted of a Criminal Offence?</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Details_of_Criminal_Offence__c</fullName>
+        <externalId>false</externalId>
+        <label>Details of Criminal Offence</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Eligible_to_Work_in_the_UK__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Eligible to Work in the UK</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Experience_Type__c</fullName>
+        <externalId>false</externalId>
+        <globalPicklist>Experience_Type</globalPicklist>
+        <label>Experience Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Final_Education_Level__c</fullName>
+        <externalId>false</externalId>
+        <globalPicklist>Final_Level_of_Education</globalPicklist>
+        <label>Final Education Level</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Last_Position__c</fullName>
+        <externalId>false</externalId>
+        <globalPicklist>Position</globalPicklist>
+        <label>Last Position</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>LinkedIn_Profile__c</fullName>
+        <externalId>false</externalId>
+        <label>LinkedIn Profile</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Max_Travel_Distance__c</fullName>
+        <externalId>false</externalId>
+        <label>Max Travel Distance</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Over 25 miles</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Up to 25 miles</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No more than 10 miles</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Under 5 miles</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Other_Charity__c</fullName>
+        <externalId>false</externalId>
+        <label>Other Charity</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Other_Languages__c</fullName>
+        <externalId>false</externalId>
+        <label>Other Languages</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Other_Qualifications__c</fullName>
+        <externalId>false</externalId>
+        <label>Other Qualifications</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Profile_Complete__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Profile Complete?</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Skype_Id__c</fullName>
+        <externalId>false</externalId>
+        <label>Skype Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Work_Frequency_Type_Monthly__c</fullName>
+        <externalId>false</externalId>
+        <globalPicklist>Work_Frequency_Type_Monthly</globalPicklist>
+        <label>Work Frequency Type - Monthly</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Work_Frequency_Type_Weekly__c</fullName>
+        <externalId>false</externalId>
+        <globalPicklist>Work_Frequency_Type_Weekly</globalPicklist>
+        <label>Work Frequency Type - Weekly</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Work_from_home__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Work from home?</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <recordTypes>
+        <fullName>Business</fullName>
+        <active>true</active>
+        <label>Business</label>
+        <picklistValues>
+            <picklist>Charity__c</picklist>
+            <values>
+                <fullName>CANCER RESEARCH UK</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MACMILLAN CANCER SUPPORT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OTHER</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ROYAL COMMONWEALTH SOCIETY FOR THE BLIND</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>THE GAVI FUND AFFILIATE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>THE SAVE THE CHILDREN FUND</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LeadSource</picklist>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partner Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone Inquiry</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purchased List</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Max_Travel_Distance__c</picklist>
+            <values>
+                <fullName>No more than 10 miles</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Over 25 miles</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Under 5 miles</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Up to 25 miles</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Name</picklist>
+            <values>
+                <fullName>Dr%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mr%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mrs%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ms%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prof%2E</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Candidate</fullName>
+        <active>true</active>
+        <label>Candidate</label>
+        <picklistValues>
+            <picklist>Charity__c</picklist>
+            <values>
+                <fullName>CANCER RESEARCH UK</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MACMILLAN CANCER SUPPORT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OTHER</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ROYAL COMMONWEALTH SOCIETY FOR THE BLIND</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>THE GAVI FUND AFFILIATE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>THE SAVE THE CHILDREN FUND</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Experience_Type</picklist>
+            <values>
+                <fullName>Both</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Private Sector</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Public Sector</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Final_Level_of_Education</picklist>
+            <values>
+                <fullName>Apprenticeship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bachelors Degree</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>College %2F 6th Form</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Masters Degree</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>School</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LeadSource</picklist>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partner Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone Inquiry</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Purchased List</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Max_Travel_Distance__c</picklist>
+            <values>
+                <fullName>No more than 10 miles</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Over 25 miles</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Under 5 miles</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Up to 25 miles</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Name</picklist>
+            <values>
+                <fullName>Dr%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mr%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mrs%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ms%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prof%2E</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Position</picklist>
+            <values>
+                <fullName>Board Level</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Director</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>First Level Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Middle Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Regional %2F Area manager</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Work_Frequency_Type_Monthly</picklist>
+            <values>
+                <fullName>I am able to commit 10 %E2%80%93 15 days per month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I am able to commit up to 20 days a month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I am able to commit up to 5 days a month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I am able to commit up to but no more than 10 days a month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I am really keen to do something but can%E2%80%99t really commit to more than one or 2 days a month</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Work_Frequency_Type_Weekly</picklist>
+            <values>
+                <fullName>I am able to work full time %2837 %C2%BD hours per week%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I am able to work part time no more than 7 %C2%BD  hours %281 day%29 per week</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I am able to work part time up to but no more than 20 hours per week</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I am able to work part time%2C probably around 25 %E2%80%93 30 hours a week</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>I wouldn%E2%80%99t want to commit weekly but I feel I can commit time over the course of a month</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+</CustomObject>

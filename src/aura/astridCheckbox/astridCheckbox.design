@@ -1,0 +1,7 @@
+<design:component label="Form Checkbox">
+    <design:attribute name="label" label="Label" />
+    <design:attribute name="checked" label="Default value of checkbox" />
+    <design:attribute name="required" label="required" />
+    <design:attribute name="disabled" label="disabled" />
+    <design:attribute name="identifier" label="identifier" />
+</design:component>

@@ -1,0 +1,12 @@
+<design:component label="Form Picklist">
+	<design:attribute name="label" label="Label" />
+    <design:attribute name="identifier" label="Identifier" />
+    <design:attribute name="objectName" label="Object Name" />
+    <design:attribute name="fieldName" label="Field Name" />
+    <design:attribute name="required" label="Required" />
+    <design:attribute name="disabled" label="Disabled" />
+    <design:attribute name="error" label="Error" />
+    
+    <design:attribute name="conditionIdentifier" label="Condition Identifier" />
+    <design:attribute name="conditionValue" label="Condition Value" />
+</design:component>

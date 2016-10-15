@@ -1,0 +1,93 @@
+<aura:component implements="forceCommunity:layout">
+    
+    <aura:attribute name="steps" type="Aura.Component[]" required="false"></aura:attribute>
+    <aura:attribute name="contentHeader1" type="Aura.Component[]" required="false"></aura:attribute>
+	<aura:attribute name="column1" type="Aura.Component[]" required="false"></aura:attribute>
+	<aura:attribute name="column2" type="Aura.Component[]" required="false"></aura:attribute>
+    <aura:attribute name="contentHeader2" type="Aura.Component[]" required="false"></aura:attribute>
+    <aura:attribute name="column3" type="Aura.Component[]" required="false"></aura:attribute>
+	<aura:attribute name="column4" type="Aura.Component[]" required="false"></aura:attribute>
+    <aura:attribute name="contentHeader3" type="Aura.Component[]" required="false"></aura:attribute>
+    <aura:attribute name="column5" type="Aura.Component[]" required="false"></aura:attribute>
+	<aura:attribute name="column6" type="Aura.Component[]" required="false"></aura:attribute>
+    <aura:attribute name="contentHeader4" type="Aura.Component[]" required="false"></aura:attribute>
+    <aura:attribute name="column7" type="Aura.Component[]" required="false"></aura:attribute>
+	<aura:attribute name="column8" type="Aura.Component[]" required="false"></aura:attribute>
+    <aura:attribute name="contentHeader5" type="Aura.Component[]" required="false"></aura:attribute>
+    <aura:attribute name="column9" type="Aura.Component[]" required="false"></aura:attribute>
+	<aura:attribute name="column10" type="Aura.Component[]" required="false"></aura:attribute>
+    <aura:attribute name="contentHeader6" type="Aura.Component[]" required="false"></aura:attribute>
+    <aura:attribute name="column11" type="Aura.Component[]" required="false"></aura:attribute>
+	<aura:attribute name="column12" type="Aura.Component[]" required="false"></aura:attribute>
+    <aura:attribute name="saveButton" type="Aura.Component[]" required="false"></aura:attribute>
+    <aura:attribute name="backButton" type="Aura.Component[]" required="false"></aura:attribute>
+    
+    <div class="slds-grid slds-wrap">
+        <div class="steps slds-col--padded slds-size--1-of-1">
+            {! v.steps }
+        </div>
+        <div class="content slds-grid slds-wrap slds-size--1-of-1">
+            <div class="col contentHeader contentHeader1 slds-col--padded slds-size--1-of-1">
+                {! v.contentHeader1 }
+            </div>
+            <div class="col column1 slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2">
+                {! v.column1 }
+            </div>
+            <div class="col column2 slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2">
+                {! v.column2 }
+            </div>
+            <div class="col contentHeader contentHeader2 slds-col--padded slds-size--1-of-1">
+                {! v.contentHeader2 }
+            </div>
+            <div class="col column3 slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2">
+                {! v.column3 }
+            </div>
+            <div class="col column4 slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2">
+                {! v.column4 }
+            </div>
+            <div class="col contentHeader contentHeader3 slds-col--padded slds-size--1-of-1">
+                {! v.contentHeader3 }
+            </div>
+            <div class="col column5 slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2">
+                {! v.column5 }
+            </div>
+            <div class="col column6 slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2">
+                {! v.column6 }
+            </div>
+            <div class="col contentHeader contentHeader4 slds-col--padded slds-size--1-of-1">
+                {! v.contentHeader4 }
+            </div>
+            <div class="col column7 slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2">
+                {! v.column7 }
+            </div>
+            <div class="col column8 slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2">
+                {! v.column8 }
+            </div>
+            <div class="col contentHeader contentHeader5 slds-col--padded slds-size--1-of-1">
+                {! v.contentHeader5 }
+            </div>
+            <div class="col column9 slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2">
+                {! v.column9 }
+            </div>
+            <div class="col column10 slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2">
+                {! v.column10 }
+            </div>
+            <div class="col contentHeader contentHeader6 slds-col--padded slds-size--1-of-1">
+                {! v.contentHeader6 }
+            </div>
+            <div class="col column11 slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2">
+                {! v.column11 }
+            </div>
+            <div class="col column12 slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2">
+                {! v.column12 }
+            </div>
+            <div class="backButton slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2">
+                {! v.backButton }
+            </div>
+            <div class="saveButton slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2">
+                {! v.saveButton }
+            </div>
+        </div>
+    </div>
+    
+</aura:component>

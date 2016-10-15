@@ -1,0 +1,27 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" >
+    
+    <aura:attribute name="label" type="String" description="Label of file selector" access="global"/>
+    <aura:attribute name="identifier" type="String" required="true" description="Identifier for component" access="global"/>
+    <aura:attribute name="buttonLabel" default="Upload File" required="true" type="String" description="Label of button" access="global"/>
+    
+    <aura:attribute name="_name" type="String" access="Private" />
+    
+    <aura:registerEvent name="astridFieldChange" type="c:astridFieldChange" />
+    <aura:handler event="c:astridFieldInitialValue" action="{! c.initialValue }"/>
+    
+    <div class="slds-form-element">
+        <span class="slds-form-element__label" id="file-selector-id">{! v.label }</span>
+        <div class="slds-form-element__control">
+            <div class="slds-file-selector slds-file-selector--files">
+                <div class="slds-file-selector__dropzone">
+                    <input class="slds-file-selector__input slds-assistive-text" accept="application/msword, text/plain, application/pdf, application/vnd.openxmlformats-officedocument.wordprocessingml.document" type="file" id="file-upload-input-01" aria-describedby="file-selector-id" onchange="{! c.onChange }"/>
+                    <label class="slds-file-selector__body" for="file-upload-input-01">
+                        <span class="slds-file-selector__button slds-button slds-button--neutral">
+                            <c:icon iconType="utility" iconName="upload" class="slds-button__icon slds-button__icon--left" />
+                            {! v.buttonLabel }</span><span class="slds-file-selector__text slds-medium-show">{! v._name }</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</aura:component>

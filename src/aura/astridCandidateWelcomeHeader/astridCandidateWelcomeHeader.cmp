@@ -1,0 +1,15 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" controller="CommunityUtilities">
+    <aura:attribute name="imageURL" type="String" access="global" description="URL of the image"/>
+    <aura:attribute name="welcomeText" type="String" description="Welcome text" access="Global" />
+    <aura:attribute name="secondaryText" type="String" access="global" description="Secondary text to be displayed"/>
+    
+    <aura:attribute name="_contactName" type="String" access="Private" />
+    <aura:handler name="init" value="{! this }" action="{! c.init }" />
+    
+    <div class="main" style="{! 'background-image:URL(' + v.imageURL + ');' }">
+        <div class="text">
+        	<h1 class="slds-text-heading--large">{! v.welcomeText }&nbsp;{! v._contactName }</h1>
+        	<h2 class="slds-text-title">{! v.secondaryText }</h2>
+        </div>
+    </div>
+</aura:component>

@@ -1,0 +1,4 @@
+<aura:event type="APPLICATION" description="Event template" access="global">
+    <aura:attribute name="name" type="String" access="global" />
+    <aura:attribute name="value" type="String" access="global" />
+</aura:event>

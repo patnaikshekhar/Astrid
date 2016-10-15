@@ -1,0 +1,7 @@
+<design:component label="Form Multiselect">
+    <design:attribute name="identifier" label="Identifier" />
+    <design:attribute name="sourceCategory" label="Source Category" />
+    <design:attribute name="destCategory" label="Destination Category" />
+    <design:attribute name="query" label="Query to be executed" />
+    <design:attribute name="fieldName" label="Field Name to be used" />
+</design:component>

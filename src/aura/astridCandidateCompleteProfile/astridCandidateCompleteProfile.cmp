@@ -1,0 +1,24 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" controller="CommunityUtilities">
+	
+    <aura:attribute name="iconName" type="String" description="Icon Name to show in the header" access="global" required="true" />
+    <aura:attribute name="iconType" type="String" description="Icon Type to show in the header" access="global" required="true" />
+    <aura:attribute name="header" type="String" description="Text to show in the header" access="global" required="true" />
+    <aura:attribute name="description" type="String" description="Text to show above the candidate register button" access="global" required="true" />
+    <aura:attribute name="registerButtonText" type="String" description="Text to show on the candidate register button" access="global" required="true" />
+    <aura:attribute name="registerButtonLink" type="String" description="Link to go to on the candidate register button" access="global" required="true" />
+    
+    <aura:attribute name="_display" type="Boolean" default="false" access="Private" />
+    <aura:handler name="init" value="{! this }" action="{! c.init }" />
+    
+    <aura:if isTrue="{! v._display }">
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col--padded slds-size--1-of-1">
+                <c:icon iconType="{! v.iconType }" iconName="{! v.iconName }" class="dashboard-icon" />
+                <h2 class="header">{! v.header }</h2>
+                <h3 class="description">{! v.description }</h3>
+                <a class="slds-button slds-button--brand" href="{! v.registerButtonLink }">{! v.registerButtonText }</a>
+            </div>
+        </div>
+    </aura:if>
+    
+</aura:component>

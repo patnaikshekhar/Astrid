@@ -1,0 +1,12 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" >
+    <aura:attribute name="imageURL" type="String" access="global" description="URL of the image"/>
+    <aura:attribute name="title" type="String" access="global" description="Title to be displayed"/>
+    <aura:attribute name="secondaryText" type="String" access="global" description="Secondary text to be displayed"/>
+    
+    <div class="main" style="{! 'background-image:URL(' + v.imageURL + ');' }">
+        <div class="text">
+        	<h1 class="slds-text-heading--large">{! v.title }</h1>
+        	<h2 class="slds-text-title">{! v.secondaryText }</h2>
+        </div>
+    </div>
+</aura:component>

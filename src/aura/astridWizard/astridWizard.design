@@ -1,0 +1,4 @@
+<design:component label="Wizard">
+	<design:attribute name="stepNames" label="Step Names" />
+    <design:attribute name="activeStep" label="Active Step" />
+</design:component>

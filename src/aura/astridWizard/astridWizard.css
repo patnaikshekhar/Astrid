@@ -1,0 +1,6 @@
+.THIS {
+}
+
+.THIS .slds-wizard .slds-is-active .slds-wizard__marker {
+    background-color: #3498db;
+}

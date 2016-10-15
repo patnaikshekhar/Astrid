@@ -1,0 +1,5 @@
+<design:component label="Hero Image">
+	<design:attribute name="imageURL" label="Image URL" />
+    <design:attribute name="title" label="Title" />
+    <design:attribute name="secondaryText" label="Secondary Text" />
+</design:component>

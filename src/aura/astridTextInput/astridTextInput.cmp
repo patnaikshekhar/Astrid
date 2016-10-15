@@ -1,0 +1,57 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes,c:HTMLAttributes,c:IconAttributes" access="GLOBAL">
+    
+    <aura:attribute name="label" type="String" default="" description="Label of the input control" access="GLOBAL" />
+    <aura:attribute name="identifier" type="String" default="" description="Identifier of the input control" access="GLOBAL" />
+    <aura:attribute name="placeholder" type="String" default="" description="Placeholder text of the input control" access="GLOBAL" />
+    <aura:attribute name="value" type="String" default="" description="Value of the input control" access="GLOBAL" />
+    <aura:attribute name="type" type="String" default="text" description="HTML Type of the input control. Can be text, email, number, date, color, month, week, time, datetime, datetime-local, tel or url" access="GLOBAL" />
+    
+    <aura:attribute name="iconPosition" type="String" default="left" description="Can be either left or right" access="GLOBAL" />
+    
+    <aura:attribute name="required" type="Boolean" default="false" description="Is this field required? Displays a star next to the label. Does not actually perform the validation" access="GLOBAL" />
+    <aura:attribute name="readOnly" type="Boolean" default="false" description="Is this field read only?" access="GLOBAL" />
+    <aura:attribute name="disabled" type="Boolean" default="false" description="Is this field disabled?" access="GLOBAL" />
+    
+    <aura:attribute name="error" type="String" default="" description="The error message." access="GLOBAL" />
+    
+    <aura:attribute name="conditionIdentifier" type="String" default="" description="The identifier to check" access="GLOBAL" />
+    <aura:attribute name="conditionValue" type="String" default="" description="The conditional value to check for" access="GLOBAL" />
+    
+    <aura:attribute name="_display" type="Boolean" default="true" access="Private" />
+    
+    <aura:registerEvent name="astridFieldChange" type="c:astridFieldChange" />
+    <aura:handler event="c:astridFieldChange" action="{! c.checkCondition }"/>
+    <aura:handler event="c:astridFieldInitialValue" action="{! c.initialValue }"/>
+    
+    <aura:handler name="init" value="{! this }" action="{! c.init }" />
+    
+    <aura:if isTrue="{! v._display }">
+        <div class="{! 'slds-form-element' +
+                    ' ' + (v.error != '' ? 'slds-has-error' : '') +
+                    ' ' + v.class }">
+            <aura:if isTrue="{! v.label != '' }">
+                <label class="slds-form-element__label" for="{! v.label }">
+                    <aura:if isTrue="{! v.required }">
+                        <abbr class="slds-required" title="required">*</abbr>
+                    </aura:if>
+                    {! v.label }</label>
+            </aura:if>
+            <div class="{! 'slds-form-element__control' 
+                        + ' ' + (v.iconName != '' ? 'slds-input-has-icon slds-input-has-icon--' + v.iconPosition : '') 
+                        + ' ' + (v.readOnly ? 'slds-has-divider--bottom' : '') }">
+                <aura:if isTrue="{! v.iconName != '' }">
+                    <c:icon iconName="{! v.iconName }" iconType="{! v.iconType }" iconSize="{! v.iconSize }" class="slds-input__icon slds-icon-text-default" />
+                </aura:if>
+                <aura:if isTrue="{! v.readOnly != true }">
+                    <input id="{! v.id }" class="slds-input" type="{! v.type }" placeholder="{! v.placeholder }" value="{! v.value }" onkeyup="{! c.onChange }" onfocus="{! c.onFocus }" onblur="{! c.onLostFocus }" disabled="{! v.disabled }"/>
+                </aura:if>
+                <aura:if isTrue="{! v.readOnly }">
+                    <span class="slds-form-element__static">{! v.value }</span>
+                </aura:if>
+            </div>
+            <aura:if isTrue="{! v.error != '' }">
+                <div class="slds-form-element__help">{! v.error }</div>
+            </aura:if>
+        </div>	
+    </aura:if>
+</aura:component>

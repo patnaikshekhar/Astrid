@@ -1,0 +1,5 @@
+<design:component label="Navigation Button">
+    <design:attribute name="label" label="Label" />
+    <design:attribute name="url" label="URL" />
+    <design:attribute name="type" label="Type" datasource="brand,neutral"/>
+</design:component>

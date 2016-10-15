@@ -1,0 +1,4 @@
+<aura:event type="APPLICATION" description="Set the current wizard Session">
+    <aura:attribute name="sessionId" type="String" />
+    <aura:attribute name="type" type="String" description="Can be set,get"/>
+</aura:event>

@@ -1,0 +1,5 @@
+<design:component label="Form File Input">
+    <design:attribute name="label" label="Label" />
+    <design:attribute name="identifier" label="Identifier" />
+    <design:attribute name="buttonLabel" label="Button Label" />
+</design:component>

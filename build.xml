@@ -1,0 +1,76 @@
+<project name="salesforce" default="validate" basedir="." xmlns:sf="antlib:com.salesforce">
+
+    <property file="build.properties"/>
+    <property environment="env"/>
+
+    <target name="deploy">      
+      <sf:deploy username="${sf.username}" 
+        password="${sf.password}" 
+        serverurl="${sf.serverurl}" 
+        runAllTests="false"
+        logType="Detail"
+        allowMissingFiles="true"
+        autoUpdatePackage="true"
+        ignoreWarnings="true"
+        deployRoot="src"/>
+    </target>
+
+    <target name="validate">
+      <sf:deploy username="${sf.username}" 
+        password="${sf.password}" 
+        serverurl="${sf.serverurl}" 
+        checkOnly="true"
+        runAllTests="true"
+        logType="Detail"
+        allowMissingFiles="true"
+        autoUpdatePackage="true"
+        ignoreWarnings="true"
+        deployRoot="src">
+      </sf:deploy>         
+    </target>
+
+    <target name="deployRunAllTests">
+      <sf:deploy username="${sf.username}" 
+        password="${sf.password}" 
+        serverurl="${sf.serverurl}" 
+        runAllTests="true"
+        logType="Detail"
+        allowMissingFiles="true"
+        autoUpdatePackage="true"
+        ignoreWarnings="true"
+        deployRoot="src"/>
+    </target>    
+
+    <target name="undeployCode">
+      <sf:deploy username="${sf.username}" 
+        password="${sf.password}" 
+        serverurl="${sf.serverurl}" 
+        ignoreWarnings="true"
+        deployRoot="undeploy"/>
+    </target> 
+    
+    <target name="retrieve" description="Recreate the deployment directory and retrieve all metadata from your org">
+        <sf:retrieve username="${sf.username}"
+                     password="${sf.password}"
+                     serverurl="${sf.serverurl}"
+                     retrieveTarget="src"
+                     unpackaged="package.xml" 
+                     maxPoll="10000" />
+    </target>
+
+    <target name="CleanUp">
+      <antcall target="ExecAnonScript">
+        <param name="what" value="dataload/cleanup.apex" />
+        <param name="username" value="${sf.username}" />
+        <param name="password" value="${sf.password}" />
+      </antcall>
+    </target>
+
+    <target name="remove_PicassoSite_from_fourth_network">
+        <echo message="remove_PicassoSite_from_fourth_network" />
+        <replaceregexp match="^    &lt;picassoSite&gt;fourth_C&lt;/picassoSite&gt;" replace="" flags="gm" byline="false">
+            <fileset dir="src/networks" includes="**/*.network" />
+        </replaceregexp>
+    </target>    
+
+</project>

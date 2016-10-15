@@ -1,0 +1,9 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" >
+    <aura:handler event="c:astridErrorEvent" action="{! c.handleEvent }" />
+    <aura:attribute name="_messages" type="String[]" access="private" />
+    
+    <aura:iteration items="{! v._messages }" var="message" indexVar="index">
+        <c:astridAlert show="true" theme="error" data="{! index }" onClose="{! c.close }">{! message }</c:astridAlert>
+    </aura:iteration>
+    
+</aura:component>

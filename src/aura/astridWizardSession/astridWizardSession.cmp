@@ -1,0 +1,6 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" >
+	
+    <aura:attribute name="_sessionId" type="String" access="Private" />
+    <aura:handler event="c:astridSessionEvent" action="{! c.handleEvent }" />
+    
+</aura:component>

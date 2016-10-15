@@ -1,0 +1,27 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" >
+    <aura:attribute name="stepNames" type="String" access="global" required="true" description="A comma seperated list of step names" />
+    <aura:attribute name="activeStep" type="Integer" access="global" required="true" default="1" description="The active step number" />
+    
+    <aura:attribute name="_stepNames" type="String[]" access="private" description="A comma seperated list of step names" />
+    <aura:attribute name="_progressPercent" type="Decimal" access="private" description="Progress percentage" />
+    
+    <aura:handler name="init" value="{! this }" action="{! c.init }" />
+    
+    <div>
+        <div class="slds-wizard" role="navigation">
+            <ol class="slds-wizard__list">
+                <aura:iteration items="{! v._stepNames }" var="step" indexVar="index">
+                    <li class="{! 'slds-wizard__item ' + (index &lt; v.activeStep ? 'slds-is-active' : '') }">
+                        <a href="javascript:void(0);" class="slds-wizard__link">
+                            <span class="slds-wizard__marker"></span>
+                            <span class="slds-wizard__label slds-text-title--caps slds-truncate">{! step }</span>
+                        </a>
+                    </li>
+                </aura:iteration>
+            </ol>
+            <span class="slds-wizard__progress">
+                <span class="slds-wizard__progress-bar" style="{! 'width:' + v._progressPercent + '%;' }"></span>
+            </span>
+        </div>
+    </div>
+</aura:component>

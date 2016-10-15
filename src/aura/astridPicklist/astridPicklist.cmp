@@ -1,0 +1,52 @@
+<aura:component implements="c:HTMLAttributes,forceCommunity:availableForAllPageTypes" access="Global" controller="AstridGenericFormController">
+    
+    <aura:attribute name="label" type="String" required="true" default="" description="Label for the select option" access="GLOBAL" />
+    <aura:attribute name="identifier" type="String" required="true" default="" description="Unique Identifier" access="GLOBAL" />
+    <aura:attribute name="objectName" type="String" required="true" default="" description="The object name which this picklist is based on" access="GLOBAL" />
+    <aura:attribute name="fieldName" type="String" required="true" default="" description="The field name which this picklist is based on" access="GLOBAL" />
+    
+    <aura:attribute name="options" type="String[]" description="The list of options" access="GLOBAL" />
+    <aura:attribute name="value" type="String" default="" description="The selected option" access="GLOBAL" />
+    
+    <aura:attribute name="required" type="Boolean" default="false" description="Is this field required?" access="GLOBAL" />
+    <aura:attribute name="disabled" type="Boolean" default="false" description="Is this field required?" access="GLOBAL" />
+    <aura:attribute name="error" type="String" default="" description="Error to be displayed" access="GLOBAL" />
+    
+    <aura:attribute name="conditionIdentifier" type="String" default="" description="The identifier to check" access="GLOBAL" />
+    <aura:attribute name="conditionValue" type="String" default="" description="The conditional value to check for" access="GLOBAL" />
+    
+	<aura:attribute name="_display" type="Boolean" default="true" access="Private" />
+    <aura:attribute name="_initialValue" type="String" default="" access="Private" />
+    
+    <aura:registerEvent name="astridFieldChange" type="c:astridFieldChange" />
+    <aura:handler name="init" value="{! this }" action="{! c.init }" />
+    <aura:handler event="c:astridFieldChange" action="{! c.checkCondition }"/>
+    <aura:handler event="c:astridFieldInitialValue" action="{! c.initialValue }"/>
+    
+    <aura:if isTrue="{! v._display }">
+        <div class="{! 'slds-form-element' +
+                    ' ' + ( v.required ? 'is-required': '') +
+                    ' ' + ( v.error != '' ? 'slds-has-error': '') +
+                    ' ' + v.class }">
+            <aura:if isTrue="{! v.label != '' }">
+                <label class="slds-form-element__label" for="{! v.id }">
+                    <aura:if isTrue="{! v.required }">
+                        <abbr class="slds-required" title="required">*</abbr>
+                    </aura:if>
+                    {! v.label }</label>
+            </aura:if>
+            <div class="slds-form-element__control">
+                <div class="slds-select_container">
+                    <select id="{! v.id }" class="slds-select" disabled="{! v.disabled }" onchange="{! c.onChange }">
+                        <aura:iteration items="{! v.options }" var="option">
+                            <option selected="{! v.value == option }" value="{! option }">{! option }</option>
+                        </aura:iteration>
+                    </select>
+                </div>
+            </div>
+            <aura:if isTrue="{! v.error != '' }">
+                <div class="slds-form-element__help">{! v.error }</div>
+            </aura:if>
+        </div>
+    </aura:if>
+</aura:component>

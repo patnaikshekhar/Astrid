@@ -1,0 +1,5 @@
+<design:component label="Welcome Header">
+    <design:attribute name="welcomeText" label="Welcome Text" />
+    <design:attribute name="secondaryText" label="Secondary Text" />
+    <design:attribute name="imageURL" label="Image URL" />
+</design:component>

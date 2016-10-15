@@ -1,0 +1,24 @@
+<design:component label="Form Input Component">
+	<design:attribute name="label" label="Label" />
+    <design:attribute name="identifier" label="Identifier" />
+    
+    <design:attribute name="placeholder" label="Placeholder"/>
+    <design:attribute name="value" label="Default Value" />
+    <design:attribute name="type"  label="HTML Type" />
+    
+    <design:attribute name="iconType" label="Icon Type"/>
+    <design:attribute name="iconName" label="Icon Name"/>
+    <design:attribute name="iconSize" label="Icon Size"/>
+    <design:attribute name="iconClass" label="Icon Class"/>
+    <design:attribute name="iconContainer" label="Icon Container"/>
+    <design:attribute name="iconContainerClass" label="Icon Container Class"/>
+    
+    <design:attribute name="required" label="Required" />
+    <design:attribute name="readOnly" label="Read Only" />
+    <design:attribute name="disabled" label="Disabled" />
+    
+    <design:attribute name="error" label="Error to be shown" />
+    
+    <design:attribute name="conditionIdentifier" label="Condition Identifier" />
+    <design:attribute name="conditionValue" label="Condition Value" />
+</design:component>

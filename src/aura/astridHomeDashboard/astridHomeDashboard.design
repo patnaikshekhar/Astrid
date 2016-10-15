@@ -1,0 +1,14 @@
+<design:component label="Home Dashboard">
+    <design:attribute name="candidateHeaderIconName" label="Candidate Header Icon Name"/>
+    <design:attribute name="candidateHeaderIconType" label="Candidate Header Icon Type"/>
+    <design:attribute name="companyHeaderIconName"  label="Company Header Icon Name"/>
+    <design:attribute name="companyHeaderIconType"  label="Company Header Icon Type"/>
+    <design:attribute name="candidateHeader"  label="Candidate Header"/>
+    <design:attribute name="companyHeader"  label="Company Header"/>
+    <design:attribute name="candidateRegisterText"  label="Candidate Register Text"/>
+    <design:attribute name="companyRegisterText"  label="Company Register Text"/>
+	<design:attribute name="candidateRegisterButtonText" label="Candidate Register Button Text" />
+    <design:attribute name="companyRegisterButtonText" label="Company Register Button Text" />
+    <design:attribute name="candidateRegisterButtonLink" label="Candidate Register Button Link" />
+    <design:attribute name="companyRegisterButtonLink" label="Company Register Button Link" />
+</design:component>

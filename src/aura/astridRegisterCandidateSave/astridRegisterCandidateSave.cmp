@@ -1,0 +1,19 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" controller="AstridCandidateRegistrationController">
+	
+    <aura:attribute name="label" type="String" description="Label for button" access="global" />
+    <aura:attribute name="URL" type="String" description="URL for next page" access="global" />
+    <aura:attribute name="action" type="String" description="Action to be called" access="global" />
+    <aura:attribute name="initializeAction" type="String" description="Action to be called when fields are initialized" access="global" />
+    
+    <aura:attribute name="_fields" type="Object" access="private" />
+    <aura:attribute name="_sessionId" type="String" access="private" />
+    
+    <aura:handler name="init" value="{! this }" action="{! c.init }" />
+    <aura:handler event="c:astridFieldChange" action="{! c.fieldChange }"/>
+    <aura:handler event="c:astridOpenSessionEvent" action="{! c.setSession }"/>
+    
+    <aura:registerEvent name="astridErrorEvent" type="c.astridErrorEvent" />
+    <aura:registerEvent name="astridSessionEvent" type="c.astridSessionEvent" />
+    
+    <a class="slds-button slds-button--brand" href="#" onclick="{! c.save }">{! v.label }</a>
+</aura:component>

@@ -1,0 +1,7 @@
+<design:component label="Register Candidate Save">
+    <design:attribute name="label" label="Label" />
+    <design:attribute name="URL" label="URL" />
+    <design:attribute name="action" label="Action to be called" />
+    <design:attribute name="initializeAction" label="Field Initialize Action" />
+    
+</design:component>

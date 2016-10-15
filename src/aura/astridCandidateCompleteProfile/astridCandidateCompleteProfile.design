@@ -1,0 +1,8 @@
+<design:component label="Continue Registration">	
+    <design:attribute name="iconName" label="Icon Name" />
+    <design:attribute name="iconType" label="Icon Type" />
+    <design:attribute name="header" label="Header" />
+    <design:attribute name="description" label="Description" />
+    <design:attribute name="registerButtonText" label="Register Button Text" />
+    <design:attribute name="registerButtonLink" label="Register Button Link" />
+</design:component>

@@ -1,0 +1,7 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+    <aura:attribute name="label" type="String" required="true" description="Label of button" />
+    <aura:attribute name="url" type="String" required="true" description="URL to navigate to" />
+    <aura:attribute name="type" type="String" default="brand" required="true" description="URL to navigate to" />
+    
+    <a class="{! 'slds-button slds-button--' + v.type }" href="{! v.url }">{! v.label }</a>
+</aura:component>
