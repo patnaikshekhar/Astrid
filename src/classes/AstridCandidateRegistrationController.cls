@@ -547,6 +547,10 @@ public without sharing class AstridCandidateRegistrationController {
                 c.AccountId = a.Id;
                 c.RecordTypeId = crt.Id;
                 insert c;
+                
+                // Update primary contact on account
+                a.Primary_Contact__c = c.Id;
+                update a;
             } else {
                 
                 a.Id = sessionId;
